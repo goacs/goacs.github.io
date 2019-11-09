@@ -1,0 +1,6 @@
+url: "https://goacs.github.io"
+baseurl: ""
+title: "GoACS"
+sass:
+  sass_dir: _sass
+  style: compressed
