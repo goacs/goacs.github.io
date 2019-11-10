@@ -1,0 +1,11 @@
+- title: TR-069 support
+  icon: podcast
+  text: Use TR-069 standard to configure you devices. A lot of vendors implements it on their devices
+
+- title: Update your devices
+  icon: cloud-upload
+  text: Make sure your devices have the latest firmware
+
+- title: Schedule tasks
+  icon: clock
+  text: With task scheduling you can easly make changes in service window

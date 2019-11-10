@@ -1,39 +1,26 @@
 <div class="colorlib-services colorlib-bg-white">
     <div class="container">
-        <div class="row">
+        {% for service in site.data.services %}
+            {% assign needSplit = forloop.index0 | mod: 3 %}
+
+            {% if needSplit == 0 or forloop.first %}
+            <div class="row">
+            {% endif %}
+
             <div class="col-md-4 text-center animate-box">
                 <div class="services">
 							<span class="icon">
-								<i class="icon-browser"></i>
+								<i class="icon-{{ service.icon }}"></i>
 							</span>
                     <div class="desc">
-                        <h3>Create your own template</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.text }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 text-center animate-box">
-                <div class="services">
-							<span class="icon">
-								<i class="icon-download"></i>
-							</span>
-                    <div class="desc">
-                        <h3>Automatic Backup Data</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center animate-box">
-                <div class="services">
-							<span class="icon">
-								<i class="icon-layers"></i>
-							</span>
-                    <div class="desc">
-                        <h3>Page Builder</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                </div>
-            </div>
+        {% if needSplit == 2 or forloop.last %}
         </div>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>

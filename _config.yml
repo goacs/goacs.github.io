@@ -4,3 +4,5 @@ title: "GoACS"
 sass:
   sass_dir: _sass
   style: compressed
+docsurl: '#'
+githuburl: 'https://github.com/pingwiniasty/goacs'
